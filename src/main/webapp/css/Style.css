@@ -1,0 +1,54 @@
+/* 页面居中，背景浅灰 */
+body {
+    font-family: "Microsoft Yahei", sans-serif;
+    background-color: #f0f2f5;
+    /* 让表单盒子居中 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* 登录表单容器 */
+form {
+    background: #ffffff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+}
+
+/* 输入框样式 */
+input[type="text"],
+input[type="password"] {
+    width: 260px;
+    padding: 10px 12px;
+    margin: 8px 0 16px;
+    border: 1px solid #dcdfe6;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* 输入框聚焦高亮 */
+input[type="text"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: #409eff;
+}
+
+/* 登录按钮 */
+input[type="submit"] {
+    width: 100%;
+    padding: 11px;
+    background-color: #409eff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #66b1ff;
+}

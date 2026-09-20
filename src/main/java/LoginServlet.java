@@ -5,6 +5,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 @WebServlet("/login")
 public class LoginServlet extends HttpServlet {
@@ -18,7 +19,10 @@ public class LoginServlet extends HttpServlet {
             request.getRequestDispatcher("welcome.jsp").forward(request,response);
 
         }else {
-            response.sendRedirect("login.html");
+            response.setContentType("text/html;charset=utf-8");
+            PrintWriter out = response.getWriter();
+            out.println("<h2>登录失败，2秒后返回登录页面</h2>");
+            response.setHeader("refresh", "2;url=login.html");
         }
     }
 }
